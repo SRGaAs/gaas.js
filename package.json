@@ -24,6 +24,7 @@
     "coffee-script": "^1.10.0",
     "handlebars": "^4.0.5",
     "handlebars-loader": "^1.1.4",
+    "source-map-loader": "^0.1.5",
     "webpack": "^1.12.11"
   }
 }
