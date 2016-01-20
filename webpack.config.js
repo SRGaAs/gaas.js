@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
@@ -38,8 +39,22 @@ module.exports = {
         test: /\.handlebars$/,
         exclude: /node_modules/,
         loaders: ['handlebars']
-      }
-    ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loaders: ['style', 'css', 'postcss']
+      },
+      {
+        test: /\.(sass|scss)$/,
+        exclude: /node_modules/,
+        loaders: ['style', 'css', 'postcss', 'sass']
+      },
+    ],
+  },
+
+  postcss: function () {
+    return [autoprefixer];
   },
 
   resolve: {
