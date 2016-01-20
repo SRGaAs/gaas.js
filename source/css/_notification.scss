@@ -2,49 +2,20 @@ $widget-width: 360px;
 $widget-width-relative: relative($widget-width, $unit: 1rem);
 
 .gaas-notification {
+  @include type-reset;
+
   width: $widget-width-relative;
   max-width: 100%;
   background-color: transparentize(white, .15);
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans', 'Pinghei TC', sans-serif;
-  font-size: 1rem;
-  text-align: left;
   -webkit-backdrop-filter: blur(3px);
   margin: 0 auto;
   padding: 1em 1.5em;
-  display: flex;
-  align-items: center;
 
   @media (min-width: $widget-width-relative) {
     border-radius: relative(5px, $unit: 1rem);
   }
 
-  h4, p {
-    line-height: relative(20px, $unit: 1rem);
-    margin: 0;
-  }
-
-  .notify-icon {
-    width: 40px;
-    height: 40px;
-    flex: 0 0 auto;
-    margin-right: 1em;
-  }
-
-  .notify-body {
-    flex: 1 1 auto;
-  }
-  .notify-title {
-    color: #333;
-    font-size: 1em;
-    font-weight: 500;
-  }
-  .notify-desc {
-    color: #666;
-    font-size: relative(14px);
-    font-weight: 300;
-  }
-
-  .btn-close {
+  .gaas-btn-close {
     $btn-font-size: 24px;
 
     width: 2rem;

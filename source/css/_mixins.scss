@@ -1,3 +1,10 @@
 @function relative($size, $base-size: 16px, $unit: 1em) {
   @return ($size / $base-size) * $unit;
 }
+
+@mixin type-reset {
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans', 'Pinghei TC', sans-serif;
+  font-size: 1rem;
+  line-height: relative(20px);
+  text-align: left;
+}

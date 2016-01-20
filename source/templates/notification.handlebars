@@ -1,11 +1,17 @@
-<div class="gaas-notification animated fadeInDown" aria-role="dialog">
-  <img class="notify-icon" src="{{icon_url}}"/>
-  <div class="notify-body">
-    <h4 class="notify-title">{{title}}</h4>
-    <p class="notify-desc">{{desc}}</p>
-  </div>
+<div class="gaas-notification gaas-animated gaas-fade-in-down"
+     aria-role="dialog">
+  <div class="gaas-achievement-cell">
+    <div class="gaas-cell-icon">
+      <img src="{{icon_url}}"/>
+    </div>
 
-  <button type="button" class="btn-close"aria-label="Close">
-    <span>&times;</span>
-  </button>
+    <div class="gaas-cell-body">
+      <h4 class="gaas-cell-title">Unlocked: {{title}}</h4>
+      <p class="gaas-cell-desc">{{desc}}</p>
+    </div>
+
+    <button type="button" class="gaas-btn-close"aria-label="Close">
+      <span>&times;</span>
+    </button>
+  </div>
 </div>

@@ -1,0 +1,36 @@
+$icon-size: relative(40px, $unit: 1rem);
+
+.gaas-achievement-cell {
+  display: flex;
+  align-items: center;
+
+  .gaas-cell-icon {
+    width: $icon-size;
+    height: $icon-size;
+    flex: 0 0 auto;
+
+    img { max-width: 100%; }
+  }
+  .gaas-cell-body {
+    margin-left: 1em;
+    flex: 1 1 auto;
+  }
+
+  .gaas-cell-title,
+  .gaas-cell-desc {
+    line-height: relative(20px, $unit: 1rem);
+    margin: 0;
+  }
+
+  .gaas-cell-title {
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .gaas-cell-desc {
+    color: #666;
+    font-size: relative(14px);
+    font-weight: 300;
+  }
+
+}
