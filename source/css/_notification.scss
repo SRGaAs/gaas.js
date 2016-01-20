@@ -1,0 +1,79 @@
+$widget-width: 360px;
+$widget-width-relative: relative($widget-width, $unit: 1rem);
+
+.gaas-notification {
+  width: $widget-width-relative;
+  max-width: 100%;
+  background-color: transparentize(white, .15);
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans', 'Pinghei TC', sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  -webkit-backdrop-filter: blur(3px);
+  margin: 0 auto;
+  padding: 1em 1.5em;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $widget-width-relative) {
+    border-radius: relative(5px, $unit: 1rem);
+  }
+
+  h4, p {
+    line-height: relative(20px, $unit: 1rem);
+    margin: 0;
+  }
+
+  .notify-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    margin-right: 1em;
+  }
+
+  .notify-body {
+    flex: 1 1 auto;
+  }
+  .notify-title {
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .notify-desc {
+    color: #666;
+    font-size: relative(14px);
+    font-weight: 300;
+  }
+
+  .btn-close {
+    $btn-font-size: 24px;
+
+    width: 2rem;
+    height: 2rem;
+    background: relative($btn-font-size, $unit: 1rem);
+    color: #aaa;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 100;
+    outline: none;
+    border: none;
+    border-radius: relative(3px, $unit: 1rem);
+    margin-right: -0.7rem;
+    padding: 0;
+    flex: 0 0 auto;
+    appearance: none;
+    cursor: pointer;
+
+    span {
+      vertical-align: relative(2px, $btn-font-size);
+    }
+
+    &:hover, &:focus {
+      background-color: rgba(0,0,0,.05);
+      color: #666;
+      border: 1px solid rgba(0,0,0,.05);
+    }
+    &:active {
+      background-color: rgba(0,0,0,.1);
+    }
+  }
+}
