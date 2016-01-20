@@ -1,0 +1,25 @@
+$item-width-min: 300px;
+$item-width-max: 360px;
+
+.gaas-achievements-list {
+  @include type-reset;
+
+  max-width: relative($item-width-max * 4);
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .gaas-list-item, .gaas-list-placeholder {
+    width: relative($item-width-min);
+    flex: 1 1 auto;
+    padding-right: 1em;
+    box-sizing: border-box;
+  }
+  .gaas-list-item {
+    padding-bottom: 1.5em;
+  }
+}
+
