@@ -1,0 +1,7 @@
+@import "~animate.css/source/base";
+@import "~animate.css/source/fading_entrances/fadeInDown";
+@import "~animate.css/source/fading_exits/fadeOutRight";
+
+.animated {
+  animation-duration: 500ms;
+}
