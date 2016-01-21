@@ -2,10 +2,11 @@
   "name": "gaas.js",
   "version": "1.0.0",
   "description": "Front-end library for GaAs",
-  "main": "dist/gaas.js",
+  "main": "dist/gaas.min.js",
   "scripts": {
-    "hots": "webpack-dev-server --hot --inline --content-base build/",
+    "hots": "webpack-dev-server --hot --inline --content-base build/ --config ./config/webpack.dev.js",
     "static": "node express.server.js",
+    "dist": "webpack -p --config ./config/webpack.dist.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,4 +1,3 @@
-const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
@@ -8,12 +7,9 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, 'build'),
     filename: '[name].js',
     library: 'GaAs'
   },
-
-  devtool: '#cheap-module-source-map',
 
   module: {
     preLoaders: [
