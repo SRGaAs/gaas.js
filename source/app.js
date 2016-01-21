@@ -28,7 +28,7 @@ class GaAs {
     this._initialized = true;
   }
 
-  static track(event_name) {
+  static track(event_name, options={preventDefault: false}) {
     // 1. POST /events
     // 2. Check achivements in response
     // 3. Append notification to body
@@ -42,11 +42,23 @@ class GaAs {
       body: queryParams
     }).then( response => response.json() )
       .then( response => {
-        response.achievements.forEach( (definition, index) => {
-          this._notificationStatck.push(definition);
-        });
+        if (!options.preventDefault) {
+          response.achievements.forEach( (definition, index) => {
+            this._notificationStatck.push(definition);
+          });
+        }
+        if (options.callback && typeof options.callback == 'function') {
+          options.callback(response.achievements);
+        }
       });
 
+  }
+
+  static getAllAchievements() {
+    const queryParams = this._getQueryParams();
+
+    return fetch(API_PREFIX + `/achievements?${ queryParams }`)
+      .then( response => response.json() );
   }
 
   static renderSummaryBoardInto(rootNodeOrSelector) {
@@ -54,10 +66,8 @@ class GaAs {
     // 2. Render summary board
     // 3. Append to rootNode
     const boardView = new SummaryBoardView(rootNodeOrSelector, {autoRender: true});
-    const queryParams = this._getQueryParams();
 
-    fetch(API_PREFIX + `/achievements?${ queryParams }`)
-      .then( response => response.json() )
+    this.getAllAchievements()
       .then( achivementsArray => {
         achivementsArray.forEach(definition => {
           boardView.addCellFromDefinition(definition);
