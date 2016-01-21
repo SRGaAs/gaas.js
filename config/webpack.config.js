@@ -46,6 +46,11 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['style', 'css', 'postcss', 'sass']
       },
+      {
+        test: /\.(png|jpg)$/,
+        exclude: /node_modules/,
+        loaders: ['url?limit=25000']
+      },
     ],
   },
 

@@ -1,0 +1,20 @@
+.gaas-summary-board {
+  margin: relative(30px, $unit: 1rem) 0;
+}
+.gaas-board-header {
+  background-color: #01b5b6;
+  padding: relative(18px, $unit: 1rem) 0;
+}
+.gaas-board-title {
+  width: relative(449px, $unit: 1rem);
+  height: relative(64px, $unit: 1rem);
+  background: url('../images/summary_board_title.png') no-repeat;
+  text-indent: -99999px;
+  display: inline-block;
+  margin: 0;
+}
+
+.gaas-board-body {
+  background-color: #fbf7ec;
+  padding: relative(30px, $unit: 1rem);
+}
