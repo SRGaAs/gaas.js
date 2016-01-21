@@ -36,6 +36,7 @@
     var testButton = document.getElementById('btn-pop-notification');
 
     GaAs.init({user_id: 5566, api_token: 'd9496317-dbbd-4434-8d01-4a9cc33719a3'});
+    GaAs.renderSummaryBoardInto('#summary-view-root');
 
     testButton.addEventListener('click', function(event) {
       GaAs._notificationStatck.push({

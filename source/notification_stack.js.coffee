@@ -4,7 +4,7 @@ NODE_ID = 'gaas-stack'
 
 _createRootNode = ->
   if existingNode = document.getElementById(NODE_ID)
-    console.warn('Notification stack has already been initialized once.')
+    throw new Error('Notification stack has already been initialized once.')
     return existingNode
 
   divNode = document.createElement('div')

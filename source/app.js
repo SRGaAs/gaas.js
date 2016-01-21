@@ -1,4 +1,5 @@
 import NotificationStack from './notification_stack'
+import SummaryBoardView from './summary_board_view'
 import './css/app.scss'
 
 const API_PREFIX = 'https://floating-garden-1441.herokuapp.com/api/v1';
@@ -48,19 +49,20 @@ class GaAs {
 
   }
 
-  static renderSummaryBoardTo(rootNode) {
+  static renderSummaryBoardInto(rootNodeOrSelector) {
     // 1. GET /achievements
     // 2. Render summary board
     // 3. Append to rootNode
-
-    let queryParams = this._getQueryParams();
+    const boardView = new SummaryBoardView(rootNodeOrSelector, {autoRender: true});
+    const queryParams = this._getQueryParams();
 
     fetch(API_PREFIX + `/achievements?${ queryParams }`)
       .then( response => response.json() )
       .then( achivementsArray => {
-        for (let i in achivementsArray) {
-          console.log(achivementsArray[i]);
-        }
+        achivementsArray.forEach(definition => {
+          boardView.addCellFromDefinition(definition);
+        });
+        boardView.render();
       });
   }
 

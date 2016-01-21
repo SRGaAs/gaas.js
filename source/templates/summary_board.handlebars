@@ -2,14 +2,9 @@
   <h4 class="gaas-board-title">Achievements</h4>
 
   <ul class="gaas-achievements-list">
-    <li class="gaas-list-item">{{> achievement_cell}}</li>
-    <li class="gaas-list-item">{{> achievement_cell}}</li>
-    <li class="gaas-list-item">{{> achievement_cell}}</li>
-    <li class="gaas-list-item">{{> achievement_cell}}</li>
-    <li class="gaas-list-item">{{> achievement_cell}}</li>
-    <li class="gaas-list-item">{{> achievement_cell}}</li>
-    <li class="gaas-list-item">{{> achievement_cell}}</li>
-    <li class="gaas-list-item">{{> achievement_cell}}</li>
+    {{#each cells}}
+      <li class="gaas-list-item">{{> achievement_cell}}</li>
+    {{/each}}
     <li class="gaas-list-placeholder"></li>
     <li class="gaas-list-placeholder"></li>
   </ul>
