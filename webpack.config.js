@@ -63,5 +63,8 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(true),
+    new webpack.ProvidePlugin({
+      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+    })
   ]
 }
