@@ -1,3 +1,5 @@
+NotificationView = require('./notification_view')
+
 NODE_ID = 'gaas-stack'
 
 _createRootNode = ->
@@ -7,6 +9,8 @@ _createRootNode = ->
 
   divNode = document.createElement('div')
   divNode.id = 'gaas-stack'
+  document.body.appendChild(divNode)
+
   return divNode
 
 class NotificationStack
@@ -17,5 +21,7 @@ class NotificationStack
     # 1. Render a view based on definition
     # 2. Append view node to @_rootNode
     # 3. Every view instance are responsible for removing theirselves from DOM.
+    view = new NotificationView(definition)
+    view.renderIntoNode(@_rootNode)
 
 module.exports = NotificationStack

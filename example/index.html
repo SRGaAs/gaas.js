@@ -32,5 +32,18 @@
   </div>
 
   <script src="http://localhost:8080/app.js"></script>
+  <script>
+    var testButton = document.getElementById('btn-pop-notification');
+
+    GaAs.init({user_id: 5566, api_token: 'd9496317-dbbd-4434-8d01-4a9cc33719a3'});
+
+    testButton.addEventListener('click', function(event) {
+      GaAs._notificationStatck.push({
+        icon_url: 'http://images.apple.com/v/mac/shared/osx/f/images/builtinapps/safari_nav_large.png',
+        title: 'Title',
+        desc: 'Description'
+      })
+    });
+  </script>
 </body>
 </html>

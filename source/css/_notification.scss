@@ -6,7 +6,7 @@ $widget-width-relative: relative($widget-width, $unit: 1rem);
 
   width: $widget-width-relative;
   max-width: 100%;
-  background-color: transparentize(white, .15);
+  background-color: transparentize(white, .25);
   -webkit-backdrop-filter: blur(3px);
   margin: 0 auto;
   padding: 1em 1.5em;

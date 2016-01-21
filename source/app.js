@@ -1,4 +1,5 @@
 import NotificationStack from './notification_stack'
+import './css/app.scss'
 
 const API_PREFIX = 'https://floating-garden-1441.herokuapp.com/api/v1';
 
@@ -38,7 +39,9 @@ class GaAs {
       body: queryParams
     }).then( response => response.json() )
       .then( response => {
-        console.log(response.achivements);
+        response.achivements.forEach( (definition, index) => {
+          this._notificationStatck.push(definition);
+        });
       });
 
   }

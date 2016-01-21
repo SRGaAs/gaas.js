@@ -3,3 +3,11 @@
 @import "achievement_cell";
 @import "achievements_list";
 @import "notification";
+
+#gaas-stack {
+  width: 100%;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  z-index: 9000;
+}
