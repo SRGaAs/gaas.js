@@ -15,6 +15,10 @@ $widget-width-relative: relative($widget-width, $unit: 1rem);
     border-radius: relative(5px, $unit: 1rem);
   }
 
+  .gaas-notification + .gaas-notification {
+    margin-top: 1em;
+  }
+
   .gaas-btn-close {
     $btn-font-size: 24px;
 
