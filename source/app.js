@@ -2,6 +2,7 @@ import NotificationStack from './notification_stack'
 import './css/app.scss'
 
 const API_PREFIX = 'https://floating-garden-1441.herokuapp.com/api/v1';
+const CONTENT_TYPE = 'application/x-www-form-urlencoded'
 
 class GaAs {
   constructor() {
@@ -36,10 +37,11 @@ class GaAs {
 
     fetch(API_PREFIX + '/events', {
       method: 'POST',
+      headers: {'Content-Type': CONTENT_TYPE},
       body: queryParams
     }).then( response => response.json() )
       .then( response => {
-        response.achivements.forEach( (definition, index) => {
+        response.achievements.forEach( (definition, index) => {
           this._notificationStatck.push(definition);
         });
       });
