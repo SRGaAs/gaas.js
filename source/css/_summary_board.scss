@@ -1,9 +1,14 @@
 .gaas-summary-board {
-  margin: relative(30px, $unit: 1rem) 0;
+  @include type-reset;
+  background-color: #fbf7ec;
+  margin: relative(30px) 0;
+  border-radius: relative(6px) relative(6px) relative(12px) relative(12px);
 }
 .gaas-board-header {
   background-color: #01b5b6;
-  padding: relative(18px, $unit: 1rem) 0;
+  text-align: center;
+  border-radius: relative(6px);
+  padding: relative(18px) 0;
 }
 .gaas-board-title {
   width: relative(449px, $unit: 1rem);
@@ -15,6 +20,5 @@
 }
 
 .gaas-board-body {
-  background-color: #fbf7ec;
   padding: relative(30px, $unit: 1rem);
 }
