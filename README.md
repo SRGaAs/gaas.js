@@ -3,6 +3,8 @@ GaAs.js
 Copyright (c) 2016 SpoonRocket, Inc.
 Licensed under the MIT license.
 
+![Screenshot](http://i.imgur.com/I3BXMzM.png)
+
 Usage
 -----
 
