@@ -2,7 +2,7 @@ import NotificationStack from './notification_stack'
 import SummaryBoardView from './summary_board_view'
 import './css/app.scss'
 
-const API_PREFIX = 'http://www.trygaas.com/api/v1';
+const API_PREFIX = 'http://trygaas.com/api/v1';
 const CONTENT_TYPE = 'application/x-www-form-urlencoded'
 
 class GaAs {

@@ -35,12 +35,13 @@
   <script>
     var testButton = document.getElementById('btn-pop-notification');
 
-    GaAs.init({user_id: 5566, api_token: 'f3e2d97b-a35e-40bf-aeb6-fb5c17d7a589'});
-    GaAs.renderSummaryBoardInto('#summary-view-root');
-
     testButton.addEventListener('click', function(event) {
       GaAs.track('demo');
     });
+
+    GaAs.init({user_id: 5566, api_token: 'f3e2d97b-a35e-40bf-aeb6-fb5c17d7a589'});
+    GaAs.renderSummaryBoardInto('#summary-view-root');
+
   </script>
 </body>
 </html>
