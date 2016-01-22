@@ -18,6 +18,10 @@ class SummaryBoardView
     if definition.percentage <= 0
       definition.icon_control = 'hide-icon'
 
+    if 0 < definition.percentage < 100
+      definition.icon_control = 'has-pie'
+      definition.show_pie = true
+
     @_cellDefinitions.push(definition)
 
   _getTemplateData: ->

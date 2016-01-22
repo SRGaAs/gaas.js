@@ -1,6 +1,7 @@
 <div class="gaas-achievement-cell">
   <div class="gaas-cell-icon {{icon_control}}">
     <img src="{{icon_url}}">
+    {{#if show_pie }}{{> pie_chart }}{{/if}}
   </div>
   <div class="gaas-cell-body">
     <h5 class="gaas-cell-title">{{name}}</h5>

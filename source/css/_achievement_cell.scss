@@ -1,4 +1,4 @@
-$icon-size: relative(40px, $unit: 1rem);
+$icon-size: relative(50px, $unit: 1rem);
 
 .gaas-achievement-cell {
   display: flex;
@@ -7,10 +7,21 @@ $icon-size: relative(40px, $unit: 1rem);
   .gaas-cell-icon {
     width: $icon-size;
     height: $icon-size;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
     flex: 0 0 auto;
 
     img { max-width: 100%; }
   }
+  .gaas-pie-chart {
+    opacity: .65;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
   .gaas-cell-body {
     margin-left: 1em;
     flex: 1 1 auto;
@@ -21,7 +32,6 @@ $icon-size: relative(40px, $unit: 1rem);
     line-height: relative(20px, $unit: 1rem);
     margin: 0;
   }
-
   .gaas-cell-title {
     color: #333;
     font-size: 1em;
@@ -35,6 +45,8 @@ $icon-size: relative(40px, $unit: 1rem);
 }
 
 .gaas-cell-icon.hide-icon {
+  border: 1px dashed #999;
+
   img { display: none; }
 
   &:before {
@@ -43,12 +55,9 @@ $icon-size: relative(40px, $unit: 1rem);
     height: 100%;
     color: #999;
     text-align: center;
-    font-size: relative(24px, $unit: 1rem);
-    line-height: relative(38px, $unit: 1rem);
+    font-size: relative(26px, $unit: 1rem);
+    line-height: $icon-size;
     font-weight: 100;
-    border: 1px dashed;
-    border-radius: 50%;
     display: block;
-    box-sizing: border-box;
   }
 }

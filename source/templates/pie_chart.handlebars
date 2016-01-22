@@ -1,0 +1,9 @@
+<svg width="50" height="50" class="gaas-pie-chart reversed">
+  <circle class="gaas-pie" r="12.5" cx="25" cy="25" stroke-width="25"
+    stroke-dasharray="{{pie_dasharray percentage radius=12.5 reversed=true}}">
+
+    <animate attributeName="stroke-dasharray" dur="500ms"
+      from="{{pie_dasharray 0 radius=12.5 reversed=true}}"
+      to="{{pie_dasharray percentage radius=12.5 reversed=true}}" />
+  </circle>
+</svg>
