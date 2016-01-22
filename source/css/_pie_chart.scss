@@ -1,0 +1,16 @@
+.gaas-pie-chart {
+  display: block;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+
+  &.reversed {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+
+  circle {
+    fill: none;
+    stroke: black;
+    stroke-width: 50;
+    transition: stroke-dasharray .3s ease;
+  }
+}

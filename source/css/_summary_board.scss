@@ -11,9 +11,10 @@
   padding: relative(18px) 0;
 }
 .gaas-board-title {
-  width: relative(449px, $unit: 1rem);
-  height: relative(64px, $unit: 1rem);
-  background: url('../images/summary_board_title.png') no-repeat;
+  width: relative(450px * .75, $unit: 1rem);
+  height: relative(64px * .75, $unit: 1rem);
+  background: url('../images/summary_board_title.png') no-repeat center center;
+  background-size: cover;
   text-indent: -99999px;
   display: inline-block;
   margin: 0;
